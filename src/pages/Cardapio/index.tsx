@@ -8,6 +8,7 @@ import { Ordenador } from "./Ordenador";
 export const Cardapio = () => {
   const [busca, setBusca] = useState('')
   const [filtro, setFiltro] = useState<number | null>(null)
+  const [ordenador, setOrdenador] = useState("")
   return (
     <>
       <main>
@@ -28,7 +29,7 @@ export const Cardapio = () => {
           setBusca={setBusca} />
           <div className={styles.cardapio__filtros}>
             <Filtros filtro={filtro} setFiltro={setFiltro}/>
-            <Ordenador/>
+            <Ordenador ordenador={ordenador} setOrdenador={setOrdenador}/>
 
           </div>
         </section>
